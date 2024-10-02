@@ -1,3 +1,4 @@
+
 # lista = conjunto de valores
 # lista = [valor 1, valor2, ...]
 # lista = list(valor 1, valor 2, ...)
@@ -29,3 +30,34 @@ sum(listaComElementos) # retorna todas as somas de todos os elementos
 
 print(sum(listaComElementos))
 sorted(listaComElementos) # retorna a lista em ordem crescente
+
+listaVazia.append(1) # adiciona um elemento 
+listaVazia.append("Texto")
+listaVazia.append(True)
+
+listaVazia.insert(2, "Novo elemento") #adiciona elemento no indicie 2
+print(listaVazia)
+
+listaVazia.remove("Texto") # remove o primeiro elemento encontrado
+print(listaVazia)
+
+print(listaVazia.pop(0))
+print(listaVazia)
+
+print(listaVazia.index("Novo elemento"))
+
+listaNacoes = ["Brasil", "Eua", "China", "Canada", "Inglaterra"]
+
+print(listaNacoes.count("Eua"))
+
+novalista = listaNacoes.copy()
+print(novalista)
+
+temElemento = "canada" in novalista
+print(temElemento)
+
+while True:
+    if "Brasil" in listaNacoes
+    print("Descobri o Brasil")
+    listaNacoes.remove("Brasil")
+elif "Inglaterra" in listaNacoes:
