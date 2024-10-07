@@ -8,10 +8,10 @@ for país in listaNacoes:
 for caracter in "Ciencia de Dados":
     print(caracter)
 
-meninas = ["Amelia", "Ana Paula", "Alice"], ["Beatriz", "Bianca", "Berenice"], ["Sofia", "Sandra",]
+meninas = [["Amelia", "Ana Paula", "Alice"], ["Beatriz", "Bianca", "Berenice"], ["Sofia", "Sandra",]]
 for menina in meninas:
     print(menina)
-    for nome in meninas:
+    for nome in menina:
         print(nome)
 
 # Range:
