@@ -32,4 +32,4 @@ with open ('arquivo.txt', 'r')as arquivo:
     print(linhas)
 
 os.rename('arquivo.txt', 'excluir.txt')
-os.remove('excluir.txt')
+os.remove('excluir.txt') 
