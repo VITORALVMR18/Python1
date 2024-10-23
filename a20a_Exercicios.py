@@ -3,7 +3,7 @@ import random
 # 0. ADVINHE O NÚMERO
 # Escreva um função que faça oo computador escolher um número inteiro entre 1 e 5 e peça ao usuário tentar descobrir qual número foi escolhido pelo computador. O programa deverá escrever no terminal se o usuário acertou ou errou a adivinhação.
 def adivinha():
-    print("Digite seu código aqui. Exclua esta linha")
+    print("")
 
 # chama a função adivinha() para executar o jogo
 adivinha()
@@ -11,19 +11,54 @@ adivinha()
 # 1. CARA OU COROA
 # Faça uma função que a pessoa digite c para escolher cara ou k para escolher coroa. Simule o lançamento de uma moeda que resulte em cara (c) ou coroa (k) e diga se a pessoa errou ou acertou na escolha.
 def jogar_moeda():
-    print("Digite seu código aqui. Exclua esta linha")
+    escolha = ""
+    while True: 
+        # Solicitar o usuario a escolher "c" para cara ou "k" para coroa
+        escolha = input("escolha 'c' para cara ou 'k' para coroa: ").lower()
+        # Verifica se a escolha é valida
+        if escolha not in ['c','k']:
+            print("escolha invalida!")
+        else:
+            break
 
-# Chama a função para executar o jogo
-jogar_moeda()
+# simula o lançamento da moeda
+moeda = random.choice(['c', 'k'])
 
+# compare o resultado da moeda com a escolha do usuario
+if moeda == escolha:
+    print(f"Parabéns! Você acertou. a moeda resultou em {moeda.upper()}.")
+else:
+    print(f"Você errou. A moeda resultou em {moeda.upper()}. Sua escolha foi {escolha.upper()}.")
+
+# chama a função jogar_moeda() para executar o jogo
+# jogar_moeda()
 
 # 2. JOGO DE DADOS
 # Faça uma função que peça ao usuário escolher um número inteiro de 2 à 12 em seguida simule o lançamento de 2 dados simultaneamente. Compare o resultado da soma dos dois dados com a escolha do usuário e avisar se ele errou ou acertou a jogada. Exemplo: O usuário escolhe 12. Um dado resulta em 6 e o outro também.
 def jogar_dados():
-    print("Digite seu código aqui. Exclua esta linha")
+    escolha = 0
+    while True:
+        # Solicita ao usuario escolher um numero inteiro de 2 a 12
+        escolha = int(input("Escolha um numero inteiro de 2 a 12"))
+        # verifica se a escolha está dentro do intervalo permitido
+        if escolha < 2 or escolha > 12:
+            print("Numero invalido!")
+        else:
+            break
 
-# Chama a função para executar o jogo
-jogar_dados()
+    # Simula o lançamento de dois dados
+    dado1 = random.randint(1, 6)
+    dado2 = random.randint(1, 6)
+
+    # Calcula a soma dos valores dos dados
+    soma_dados = dado1 + dado2
+
+    # Compara a soma dos dados com a escolha do usuario
+    if soma_dados == escolha:
+        print(f"Parabens! Voce acertou. Os dados resultaram em {dado1} e {dado2}, somando {soma_dados}")
+    else:
+        print(
+            f"Voce errou. os dados resultaram em {dado1} e {dado2}, somando {soma_dados}. Sua escolha foi {escolha}.")
 
 # 3. PAR OU ÍMPAR
 # Desenvolva uma função onde o usuário joga par ou impar contra o computador. O usuário digita "par" ou digita "impar" e o programa diz quem ganhou.
