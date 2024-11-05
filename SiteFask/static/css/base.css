@@ -1,7 +1,26 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+    
 body {
-    background-color: #003;
+    background: #003 url("../imgs/bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-main > selection {
+body > section {
     color: white;
+    text-align: center;
+    width: 100%;
+    padding: 150px 40px 40px 40px;
+
+    background-color:#003a;
+
+}
+
+body > section > h1 {
+        font-size: 70px;
+        margin-bottom: 50px;
 }
